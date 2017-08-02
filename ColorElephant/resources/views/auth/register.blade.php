@@ -60,20 +60,7 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
-
-                        <div class="form-group{{ $errors->has('cover_letter') ? ' has-error' : '' }}">
-                            <label for="cover_letter" class="col-md-4 control-label">Cover Letter</label>
-
-                            <div class="col-md-6">
-                                <textarea id="cover_letter" type="textarea" rows="5" class="form-control" name="cover_letter" value="{{ old('cover_letter') }}" required autofocus> </textarea>
-
-                                @if ($errors->has('cover_letter'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('cover_letter') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+                        
 
                         <div class="form-group{{ $errors->has('resume') ? ' has-error' : '' }}">
                             <label for="resume" class="col-md-4 control-label">Upload Resume</label>
@@ -102,7 +89,7 @@
                             </div>
                         </div>
 
-                        <div>{{ app('captcha')->display(); }}</div>
+                      
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
